@@ -1,12 +1,45 @@
+
+gpo.zugaina.org
+Search Portage & Overlays:
+Newest News Repository news GLSAs Browse USE Flags Overlays More...
+media-sound/oss
+Open Sound System (OSS)
+
+    http://www.opensound.com/
+
+    oss-4.2.9999
+
+    View      Download      Browse     License: GPL-2   
+    Overlay: lanodanOverlay
+    oss-4.2.2020
+
+    View      Download      Browse     License: GPL-2   
+    Overlay: lanodanOverlay
+    oss-4.2.2019
+
+    View      Download      Browse     License: GPL-2   
+    Overlay: lanodanOverlay
+
+ChangeLog USE Flags Dependencies Reverse Deps Related Bugs
+
+
+
+gpo.zugaina.org - An unofficial overlays portage website
+"Gentoo" is a trademark of Gentoo Foundation, Inc.
+Website code from Mike Valstar and Ycarus
+Gentoo Portage Overlays by Ycarus/Zugaina.org
+Close
+
 # Copyright 2020 Haelwenn (lanodan) Monnier <contact@hacktivis.me>
 # Distributed under the terms of the GNU General Public License v2
-# Modified by ...
 
 EAPI=7
 
-DESCRIPTION="Open Sound System (OSSv4)"
+MY_P="oss-v$(ver_cut 1-2)-build$(ver_cut 3)-src-gpl"
+
+DESCRIPTION="Open Sound System (OSS)"
 HOMEPAGE="http://www.opensound.com/"
-SRC_URI="https://github.com/Adam-Amongus/oss4_musl/blob/main/oss4_musl.tar.gz"
+SRC_URI="https://github.com/Adam-Amongus/oss4_musl/raw/main/oss4_musl.tar.gz"
 S="${WORKDIR}/${MY_P}"
 LICENSE="GPL-2"
 SLOT="0"
@@ -43,3 +76,4 @@ src_install() {
 
 	emake DESTDIR="${D}/" copy
 }
+
