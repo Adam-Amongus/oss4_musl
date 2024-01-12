@@ -1,13 +1,12 @@
 # Copyright 2020 Haelwenn (lanodan) Monnier <contact@hacktivis.me>
 # Distributed under the terms of the GNU General Public License v2
+# Modified by ...
 
 EAPI=7
 
-MY_P="oss-v$(ver_cut 1-2)-build$(ver_cut 3)-src-gpl"
-
-DESCRIPTION="Open Sound System (OSS)"
+DESCRIPTION="Open Sound System (OSSv4)"
 HOMEPAGE="http://www.opensound.com/"
-SRC_URI="http://www.opensound.com/developer/sources/stable/gpl/${MY_P}.tar.bz2"
+SRC_URI="https://github.com/Adam-Amongus/oss4_musl/blob/main/oss4_musl.tar.gz"
 S="${WORKDIR}/${MY_P}"
 LICENSE="GPL-2"
 SLOT="0"
